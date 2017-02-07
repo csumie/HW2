@@ -1,0 +1,17 @@
+{
+  "name": "hw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss   assets/css/main.css",
+    "watch-node-sass": "node-sass --watch scss/main.scss --output assets/css/  --source-map true",
+    "start": "browser-sync start --browser \"google chrome\" --server 'public' --files 'public'",
+    "boom!": "concurrently \"npm run start\" \"npm run watch-node-sass\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  }
+}
