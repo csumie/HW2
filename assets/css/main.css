@@ -1,105 +1,3 @@
-/*
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-
-}  
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.site-nav ul, li {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
- body.fixed-nav .site-header {
-    position: fixed;
-    top: 0;
-    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1); }
-
-.account-dropdown ul {
-  display: none;
-}
-
-.site-header {
-  background: #0D1313;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding:0.5rem;
-
-}
-
-.site-wrap {
-  margin: 0.5em;
-  padding: 24px;
-  box-shadow:0 5px 3px rgba(0,0,0,0.1);
-  transform: scale(0.98);
-  transition: transform 0.5s;
-
-}
-
-.logo  {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 10px;
-}
-
-a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #CDD0D0;
-  padding: 20px;
-  display: inline-block;
-}
-
-.active a {
-  font-weight: bold;
-  color: #62DEBE;
-  background: darken(#62DEBE, 40%);
-}
-
-.account-actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.sign-out-link {
-  color: #62DEBE;
-  font-size: 0.8rem;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-
-.element {
-  align: center;
-  width: calc(90vw - 10px);
-  height: calc(90vw - 10px);
-}
-
-@media (max-width: 600px) {
-  .site-header {
-    flex-wrap: wrap;
-  }
-  .site-nav {
-    order: 2;
-    background: #333;
-    width: 100%;
-  }
-*/
-
-
-/* Semi-Consolidated */
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -109,15 +7,15 @@ body {
 .site-wrap {
   background: white;
   text-align: justify;
-  transform: scale(0.98);
-  transition: transform 0.5s;
-  padding: .5vh 5vw;
+
 }
 
-@media (min-width: 46.25em) {
+@media (min-width: 45em) {
   .site-wrap {
     padding: 5vh 5vw;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    transform: scale(0.98);
+    transition: transform 0.5s;
   }
 }
 
@@ -130,20 +28,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
-body.fixed-nav nav {
+@media (min-width: 20em) {
+  body.fixed-nav header {
   position: fixed;
   box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
-}
-
-@media (min-width: 40em) {
-  body.fixed-nav nav {
-    width: 100%;
-    order: 2;
-    font-size: 1rem;
+  z-index: 10;
+  width: 100%;
+  font-size: 1rem;
+  order: 2;
   }
 }
+
 
 nav {
   top: 0;
@@ -162,6 +60,9 @@ nav {
   flex-wrap: wrap;
   background-size: cover;
   margin-top: 0px;
+  transition: all 0.5s;
+  top: 0;
+
 }
 
 .site-nav {
@@ -186,7 +87,6 @@ nav {
 .site-nav ul {
   list-style: none;
   display: flex;
-  flex: flex-wrap;
   padding: 0;
   justify-content: center;
 }
